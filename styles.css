@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Bebas Neue";
+}
+
+body {
+  color: #ffffff;
+  font-family: "Bebas Neue", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  text-align: center;
+  z-index: 40;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  z-index: 40;
+}
+
+a:hover {
+  color: #16d9e3;
+  z-index: 40;
+}
+
+.start {
+  font-size: 1.5rem;
+  z-index: 40;
+}
+
+h1 {
+  z-index: 40;
+
+  line-height: 1.4;
+  font-size: 4rem;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  transition: margin 0.5s ease-out;
+  z-index: 40;
+
+  background-color: #19eaa6;
+}
+
+.screen.up {
+  margin-top: -100vh;
+}
+.screen.down {
+  margin-top: 0;
+}
+
+.time-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  z-index: 40;
+}
+
+.time-list li {
+  margin: 10px;
+}
+
+.time-btn {
+  background-color: transparent;
+  border: 2px solid #c0c0c0;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  z-index: 40;
+}
+
+.time-btn:hover {
+  border: 2px solid #16d9e3;
+  color: #16d9e3;
+  z-index: 40;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.primary {
+  color: #16d9e3;
+  z-index: 40;
+}
+
+.board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 30vw;
+  height: 30vw;
+  background-color: #195f6336;
+  border-radius: 30px;
+  overflow: hidden;
+  z-index: 40;
+}
+@media  (max-width: 600px) {
+.board {
+  width: 95vw;
+  height: 95vw;
+}
+
+}
+.circle {
+  background: linear-gradient(90deg, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+  position: absolute;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 40;
+}
+.startNow {
+  margin: 30px;
+  z-index: 40;
+}
+
+.countdown-title {
+}
+
+.countdown {
+  font-family: sans-serif;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  width: 600px;
+  flex-direction: row;
+  z-index: 40;
+}
+.countdown-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 20px;
+  color: #c0c0c0;
+}
+
+.countdown-time {
+  color: #ffffff;
+  margin: 10px;
+  z-index: 40;
+}
+.none {
+  display: none;
+}
+.hide {
+  display: none;
+}
+
+.holder,
+.first,
+.second,
+.third {
+  position: absolute;
+  background-color: #29323c;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 30;
+}
+.first,
+.second,
+.third {
+  position: absolute;
+}
+.second,
+.third {
+  opacity: 0;
+}
+.holder {
+  height: 0vh;
+  z-index: 1;
+}
+.first {
+  animation: first 10s infinite;
+  background: linear-gradient(#5ff8ca, #60e08c);
+  z-index: 10;
+}
+@keyframes first {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  30% {
+    opacity: 0.4;
+  }
+  40% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  60% {
+    opacity: 0.2;
+  }
+  70% {
+    opacity: 0.4;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.second {
+  animation: second 10s infinite;
+  animation-delay: 2s;
+  background: linear-gradient(#19eaa6, #00a1f0);
+  z-index: 20;
+}
+@keyframes second {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 0.4;
+  }
+  30% {
+    opacity: 0.6;
+  }
+  40% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.8;
+  }
+  70% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  90% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.third {
+  animation: third 10s infinite;
+  animation-delay: 8s;
+  background: linear-gradient(#aab7f8, #ff75c6);
+  z-index: 30;
+}
+@keyframes third {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 0.4;
+  }
+  30% {
+    opacity: 0.6;
+  }
+  40% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.8;
+  }
+  70% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  90% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
